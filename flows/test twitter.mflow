@@ -4,10 +4,10 @@
         <properties>
             <property value="Twitter" name="name"/>
             <property value="1" name="auxiliary;index"/>
-            <property value="76290832-j6kY7BWdbhz0MDSVv5djkBbCxHrang4dmS3r72SVQ" name="accessKey"/>
-            <property value="H9FSWg4QdiZIYTldnyoMk38UthNoo758xm6rmTMJKLA" name="accessSecret"/>
-            <property value="awvi5VJfPz797hajumMzg" name="consumerKey"/>
-            <property value="FxqtBes92svS0iCYsCwwXsaNPal4YYjgdDioQ6QuA" name="consumerSecret"/>
+            <property value="aaaa" name="accessKey"/>
+            <property value="bbbbb" name="accessSecret"/>
+            <property value="cccc" name="consumerKey"/>
+            <property value="dddd" name="consumerSecret"/>
             <property name="useSSL"/>
             <property value="1" name="auxiliary;index"/>
             <property value="1" name="auxiliary;index"/>
@@ -20,7 +20,7 @@
             <property value="1" name="auxiliary;index"/>
         </properties>
     </global-element>
-    <flow SubFlow="false" name="test_twitterFlow1" entity-id="7c4e04c2-445e-46a1-b104-7d6cee6bbbec">
+    <flow SubFlow="false" name="test_twitterFlow1" entity-id="d83fb3c1-48ae-4f56-a2b8-b638709f1b53">
         <properties>
             <property name="processingStrategy2"/>
             <property name="processingStrategy"/>
