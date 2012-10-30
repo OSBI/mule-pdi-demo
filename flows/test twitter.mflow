@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mule-configuration xmlns="http://www.mulesoft.com/tooling/messageflow" name="test twitter">
+    <global-element type="http://www.mulesoft.org/schema/mule/twitter/config" name="Twitter" entity-id="Twitter#1">
+        <properties>
+            <property value="Twitter" name="name"/>
+            <property value="1" name="auxiliary;index"/>
+            <property value="76290832-j6kY7BWdbhz0MDSVv5djkBbCxHrang4dmS3r72SVQ" name="accessKey"/>
+            <property value="H9FSWg4QdiZIYTldnyoMk38UthNoo758xm6rmTMJKLA" name="accessSecret"/>
+            <property value="awvi5VJfPz797hajumMzg" name="consumerKey"/>
+            <property value="FxqtBes92svS0iCYsCwwXsaNPal4YYjgdDioQ6QuA" name="consumerSecret"/>
+            <property name="useSSL"/>
+            <property value="1" name="auxiliary;index"/>
+            <property value="1" name="auxiliary;index"/>
+            <property name="proxyHost"/>
+            <property name="proxyPort"/>
+            <property name="proxyUsername"/>
+            <property name="proxyPassword"/>
+            <property value="1" name="auxiliary;index"/>
+            <property value="1" name="auxiliary;index"/>
+            <property value="1" name="auxiliary;index"/>
+        </properties>
+    </global-element>
+    <flow SubFlow="false" name="test_twitterFlow1" entity-id="7c4e04c2-445e-46a1-b104-7d6cee6bbbec">
+        <properties>
+            <property name="processingStrategy2"/>
+            <property name="processingStrategy"/>
+            <property value="2" name="auxiliary;index"/>
+            <property name="bussinessEventsLabel"/>
+            <property name="tracking:enable-default-events"/>
+            <property value="2" name="auxiliary;index"/>
+            <property value="2" name="auxiliary;index"/>
+            <property value="2" name="auxiliary;index"/>
+        </properties>
+        <lane isChoiceOtherwiseLane="false" index="0" hadOnlyOneElement="false" entity-id="compartment-lane#1">
+            <endpoint message-exchange-pattern="OneWay" direction="Inbound" type="http://www.mulesoft.org/schema/mule/twitter/endpoint" name="Twitter (Streaming)" entity-id="Twitter (Streaming)#1">
+                <properties>
+                    <property value="one-way" name="exchange-pattern"/>
+                    <property value="Twitter" name="config-ref"/>
+                    <property value="http://www.mulesoft.org/schema/mule/twitter/sample-stream" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
+                    <property value="Twitter" name="config-ref"/>
+                    <property value="3" name="auxiliary;index"/>
+                    <property value="3" name="auxiliary;index"/>
+                    <property value="3" name="auxiliary;index"/>
+                    <property value="3" name="auxiliary;index"/>
+                    <property value="3" name="auxiliary;index"/>
+                    <property value="3" name="auxiliary;index"/>
+                    <property value="3" name="auxiliary;index"/>
+                </properties>
+            </endpoint>
+            <pattern type="http://www.mulesoft.org/schema/mule/core/component" name="Java" entity-id="Java#1">
+                <properties>
+                    <property value="4" name="auxiliary;index"/>
+                    <property value="4" name="auxiliary;index"/>
+                    <property value="4" name="auxiliary;index"/>
+                    <property name="class"/>
+                    <property value="4" name="auxiliary;index"/>
+                    <property value="4" name="auxiliary;index"/>
+                    <property value="4" name="auxiliary;index"/>
+                    <property-collection name="@http://www.mulesoft.org/schema/mule/core/singleton-object;0">
+                        <property value="com.meteoritecloud.demo.twitterimport" name="class"/>
+                        <property value="5" name="auxiliary;wrapIn"/>
+                        <property value="5" name="auxiliary;index"/>
+                    </property-collection>
+                </properties>
+            </pattern>
+        </lane>
+    </flow>
+    <description></description>
+</mule-configuration>

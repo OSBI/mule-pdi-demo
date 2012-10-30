@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:twitter="http://www.mulesoft.org/schema/mule/twitter" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:spring="http://www.springframework.org/schema/beans" version="CE-3.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/twitter http://www.mulesoft.org/schema/mule/twitter/current/mule-twitter.xsd 
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd 
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd ">
+    <twitter:config name="Twitter" accessKey="76290832-j6kY7BWdbhz0MDSVv5djkBbCxHrang4dmS3r72SVQ" accessSecret="H9FSWg4QdiZIYTldnyoMk38UthNoo758xm6rmTMJKLA" consumerKey="awvi5VJfPz797hajumMzg" consumerSecret="FxqtBes92svS0iCYsCwwXsaNPal4YYjgdDioQ6QuA" doc:name="Twitter"/>
+    <flow name="test_twitterFlow1" doc:name="test_twitterFlow1">
+        <twitter:sample-stream config-ref="Twitter" doc:name="Twitter (Streaming)"/>
+        <!-- <logger message="#[groovy:payload.text]" level="INFO" doc:name="Logger"/> -->
+        <!-- <component class="com.meteoritecloud.demo.twitterimport" doc:name="Java"/>-->
+<component>
+    <singleton-object class="com.meteoritecloud.demo.twitterimport"/>
+</component>
+    </flow>
+</mule>
